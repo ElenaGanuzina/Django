@@ -17,6 +17,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     quantity = models.IntegerField()
     add_date = models.DateField(auto_now=True)
+    image = models.ImageField(upload_to='image/', null=True)
 
 
 class Order(models.Model):
@@ -24,5 +25,8 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     total = models.DecimalField(default=0, max_digits=8, decimal_places=2)
     order_date = models.DateField(auto_now=True)
+
+
+
 
 
