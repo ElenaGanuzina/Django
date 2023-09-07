@@ -24,3 +24,4 @@ def upload_product(request):
     return render(request, 'hw4_app/upload_product.html', {'form': form})
 
 
+
